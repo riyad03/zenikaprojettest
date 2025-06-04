@@ -34,12 +34,23 @@ distributeurautomatique/
 Vous avez deux options pour lancer le backend :
 
 #### Option 1 : Via IDE
-1. Installer IntelliJ Ultimate ou Eclipse
-2. Ouvrir le dossier `distributeurautomatique`
-3. Exécuter l'application via l'IDE (classe principale : `DistributeurautomatiqueApplication`)
 
-Important: Il faut avoir activé Lumbok pour que ça fonctionne sans erreur: 
-Dans IntelliJ: Settings->Build, Execution, Depoloyment->Compiler->Annotation Processors->Annotation Profile for Distributeurautomatique: changer du mode Processor path à obtain processors from project classpath
+1. Installer IntelliJ Ultimate ou Eclipse  
+2. Ouvrir le dossier `distributeurautomatique`  
+3. Exécuter l'application via l'IDE (classe principale : `DistributeurautomatiqueApplication`)  
+
+⚠️ **Important** : Ce projet utilise [Lombok](https://projectlombok.org/) pour générer automatiquement le code répétitif (getters, setters, etc.).
+
+Pour que le projet fonctionne correctement, **Lombok doit être installé et activé dans l'IDE**.
+
+👉 **Dans IntelliJ** :  
+- Installer le plugin Lombok (Settings → Plugins)  
+- Aller dans **Settings → Build, Execution, Deployment → Compiler → Annotation Processors**  
+- Cocher **"Enable annotation processing"**  
+- Pour le profil `Distributeurautomatique`, changer le mode **Processor path** en **"Obtain processors from project classpath"**
+
+🔁 Sans cela, le projet peut afficher des erreurs comme getPrice() etc.
+
 
 #### Option 2 : Via ligne de commande
 ```bash
@@ -51,6 +62,7 @@ mvn spring-boot:run
 Le serveur démarre sur http://localhost:8080
 
 ### Frontend (React)
+Le frontend est une application React située dans le dossier `front/frontapp`.
 
 1. Installer les dépendances
 ```bash
