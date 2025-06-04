@@ -21,7 +21,7 @@ public class ProduitManager implements ProduitService {
 
         produits.forEach(p -> {
             if (solde >= TotalPrix+p.getPrice()) {
-                p.setPossibleAchat(true);  // Note : respect du camelCase
+                p.setPossibleAchat(true);
             } else {
                 p.setPossibleAchat(false);
             }
