@@ -38,6 +38,9 @@ Vous avez deux options pour lancer le backend :
 2. Ouvrir le dossier `distributeurautomatique`
 3. Exécuter l'application via l'IDE (classe principale : `DistributeurautomatiqueApplication`)
 
+Important: Il faut avoir activé Lumbok pour que ça fonctionne sans erreur: 
+Dans IntelliJ: Settings->Build, Execution, Depoloyment->Compiler->Annotation Processors->Annotation Profile for Distributeurautomatique: changer du mode Processor path à obtain processors from project classpath
+
 #### Option 2 : Via ligne de commande
 ```bash
 cd distributeurautomatique
